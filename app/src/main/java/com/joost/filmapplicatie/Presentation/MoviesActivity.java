@@ -287,7 +287,7 @@ public class MoviesActivity extends AppCompatActivity implements MovieListener {
             this.movieList.getMovieList().clear();
 
             for(Movie movie : searchedMovies){
-                if(movie.getTitle().equals(searchKeyword)){
+                if(containsIgnoreCase(movie.getTitle(),searchKeyword)){
                     this.movieList.getMovieList().add(movie);
                 }
             }
@@ -298,6 +298,20 @@ public class MoviesActivity extends AppCompatActivity implements MovieListener {
         } else{
             Toast.makeText(this, "Input needed to search films", Toast.LENGTH_SHORT).show();
         }
+    }
+
+    public static boolean containsIgnoreCase(String str, String searchStr)     {
+        if(str == null || searchStr == null) return false;
+
+        final int length = searchStr.length();
+        if (length == 0)
+            return true;
+
+        for (int i = str.length() - length; i >= 0; i--) {
+            if (str.regionMatches(true, i, searchStr, 0, length))
+                return true;
+        }
+        return false;
     }
 
 }
