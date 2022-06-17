@@ -1,0 +1,20 @@
+<resources>
+
+    <string name="app_name">Movies</string>
+    <string name="movie_title">Movie List Title</string>
+    <string name="homescreen_title_text">Movie application</string>
+    <string name="homescreen_button_text">Continue</string>
+    <string name="submit_movie">Create list</string>
+    <string name="trailer">Watch trailer</string>
+    <string name="search_hint">Search</string>
+    <string name="save_settings">Save settings</string>
+    <string name="english">English</string>
+    <string name="dutch">Dutch</string>
+    <string name="dark_mode_switch_text">Dark mode</string>
+    <string name="add_to_personal_list">Add to personal list</string>
+    <string name="icon_of_application">Icon of application</string>
+    <string name="searched_movies_list_name">Searched movies</string>
+    <string name="personal_list_list_name">Personal list</string>
+    <string name="all_movies_list_name">All movies</string>
+
+</resources>

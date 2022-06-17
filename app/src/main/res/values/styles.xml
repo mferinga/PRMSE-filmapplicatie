@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <style name="homescreen_titel">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textSize">40sp</item>
+        <item name="android:textStyle">italic</item>
+        <item name="android:textAlignment">center</item>
+        <item name="android:textColor">@color/design_default_color_on_primary</item>
+    </style>
+
+    <style name="button_style">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:width">180sp</item>
+        <item name="android:height">50sp</item>
+        <item name="android:textColor">@color/design_default_color_on_primary</item>
+        <item name="android:backgroundTint">@color/blue1</item>
+    </style>
+
+
+</resources>

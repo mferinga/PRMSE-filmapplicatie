@@ -1,0 +1,223 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <item
+        android:id="@+id/sort"
+        android:icon="@drawable/ic_sort"
+        android:title="Sort"
+        app:showAsAction="always">
+
+        <menu>
+
+            <item
+                android:id="@+id/sort_title"
+                android:title="Title"
+                android:icon="@drawable/ic_text"
+                app:showAsAction="never">
+
+                <menu>
+                    <item
+                        android:id="@+id/sort_title_az"
+                        android:title="Title - AZ"
+                        android:icon="@drawable/ic_text"
+                        app:showAsAction="never"/>
+                    <item
+                        android:id="@+id/sort_title_za"
+                        android:title="Title - ZA"
+                        android:icon="@drawable/ic_text"
+                        app:showAsAction="never"/>
+                </menu>
+
+            </item>
+
+            <item
+                android:id="@+id/sort_date"
+                android:title="Date"
+                android:icon="@drawable/ic_calendar"
+                app:showAsAction="never">
+
+                <menu>
+                    <item
+                        android:id="@+id/sort_date_new_old"
+                        android:title="Date - new/old"
+                        android:icon="@drawable/ic_calendar"
+                        app:showAsAction="never"/>
+                    <item
+                        android:id="@+id/sort_date_old_new"
+                        android:title="Date - old/new"
+                        android:icon="@drawable/ic_calendar"
+                        app:showAsAction="never"/>
+                </menu>
+
+            </item>
+
+            <item
+                android:id="@+id/sort_rating"
+                android:title="Rating"
+                android:icon="@drawable/ic_star"
+                app:showAsAction="never">
+
+                <menu>
+                    <item
+                        android:id="@+id/sort_rating_high_low"
+                        android:title="Rating - high/low"
+                        android:icon="@drawable/ic_star"
+                        app:showAsAction="never"/>
+                    <item
+                        android:id="@+id/sort_rating_low_high"
+                        android:title="Date - low/high"
+                        android:icon="@drawable/ic_star"
+                        app:showAsAction="never"/>
+                </menu>
+
+            </item>
+
+        </menu>
+
+
+    </item>
+
+    <item
+        android:id="@+id/filter"
+        android:icon="@drawable/ic_filter"
+        android:title="Sort"
+        app:showAsAction="always">
+
+        <menu>
+            <item
+                android:id="@+id/filter_rating"
+                android:title="Rating"
+                android:icon="@drawable/ic_star"
+                app:showAsAction="never">
+
+                <menu>
+
+                    <item
+                        android:id="@+id/filter_rating_0_2"
+                        android:title="0 - 2"
+                        android:icon="@drawable/ic_star"
+                        app:showAsAction="never"/>
+
+                    <item
+                        android:id="@+id/filter_rating_2_4"
+                        android:title="2 - 4"
+                        android:icon="@drawable/ic_star"
+                        app:showAsAction="never"/>
+
+                    <item
+                        android:id="@+id/filter_rating_4_6"
+                        android:title="4 - 6"
+                        android:icon="@drawable/ic_star"
+                        app:showAsAction="never"/>
+
+                    <item
+                        android:id="@+id/filter_rating_6_8"
+                        android:title="6 - 8"
+                        android:icon="@drawable/ic_star"
+                        app:showAsAction="never"/>,
+
+                    <item
+                        android:id="@+id/filter_rating_8_10"
+                        android:title="8 - 10"
+                        android:icon="@drawable/ic_star"
+                        app:showAsAction="never"/>
+
+                </menu>
+
+            </item>
+
+            <item
+                android:id="@+id/filter_genre"
+                android:title="Genre"
+                android:icon="@drawable/ic_category"
+                app:showAsAction="never">
+
+                <menu>
+
+                    <item
+                        android:id="@+id/filter_genre_action"
+                        android:title="Action"
+                        android:icon="@drawable/ic_category"
+                        app:showAsAction="never"/>
+
+                    <item
+                        android:id="@+id/filter_genre_adventure"
+                        android:title="Action"
+                        android:icon="@drawable/ic_category"
+                        app:showAsAction="never"/>
+
+                    <item
+                        android:id="@+id/filter_genre_animation"
+                        android:title="Animation"
+                        android:icon="@drawable/ic_category"
+                        app:showAsAction="never"/>
+
+                    <item
+                        android:id="@+id/filter_genre_comedy"
+                        android:title="Comedy"
+                        android:icon="@drawable/ic_category"
+                        app:showAsAction="never"/>
+
+                    <item
+                        android:id="@+id/filter_genre_crime"
+                        android:title="Crime"
+                        android:icon="@drawable/ic_category"
+                        app:showAsAction="never"/>
+
+                    <item
+                        android:id="@+id/filter_genre_drama"
+                        android:title="Drama"
+                        android:icon="@drawable/ic_category"
+                        app:showAsAction="never"/>
+
+                    <item
+                        android:id="@+id/filter_genre_fantasy"
+                        android:title="Fantasy"
+                        android:icon="@drawable/ic_category"
+                        app:showAsAction="never"/>
+
+                    <item
+                        android:id="@+id/filter_genre_horror"
+                        android:title="Horror"
+                        android:icon="@drawable/ic_category"
+                        app:showAsAction="never"/>
+
+                    <item
+                        android:id="@+id/filter_genre_mystery"
+                        android:title="Mystery"
+                        android:icon="@drawable/ic_category"
+                        app:showAsAction="never"/>
+
+                    <item
+                        android:id="@+id/filter_genre_romance"
+                        android:title="Romance"
+                        android:icon="@drawable/ic_category"
+                        app:showAsAction="never"/>
+
+                    <item
+                        android:id="@+id/filter_genre_science_fiction"
+                        android:title="Science fiction"
+                        android:icon="@drawable/ic_category"
+                        app:showAsAction="never"/>
+
+                    <item
+                        android:id="@+id/filter_genre_thriller"
+                        android:title="Thriller"
+                        android:icon="@drawable/ic_category"
+                        app:showAsAction="never"/>
+
+                </menu>
+
+            </item>
+        </menu>
+
+    </item>
+
+    <item
+        android:id="@+id/settings"
+        android:icon="@drawable/ic_settings"
+        android:title="Settings"
+        app:showAsAction="always"/>
+
+</menu>
