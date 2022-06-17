@@ -278,7 +278,7 @@ public class MoviesActivity extends AppCompatActivity implements MovieListener {
 
         if(!searchBar.getText().toString().equals("")){
             this.searchKeyword = searchBar.getText().toString();
-            Toast.makeText(this, "Input = " + searchKeyword, Toast.LENGTH_SHORT).show();
+//            Toast.makeText(this, "Input = " + searchKeyword, Toast.LENGTH_SHORT).show();
 
             // Zoeken in movielist
             List<Movie> searchedMovies = new ArrayList<>();
@@ -288,6 +288,8 @@ public class MoviesActivity extends AppCompatActivity implements MovieListener {
 
             for(Movie movie : searchedMovies){
                 if(containsIgnoreCase(movie.getTitle(),searchKeyword)){
+                    this.movieList.getMovieList().add(movie);
+                } else if(containsIgnoreCase(movie.getDescription(),searchKeyword)){
                     this.movieList.getMovieList().add(movie);
                 }
             }
