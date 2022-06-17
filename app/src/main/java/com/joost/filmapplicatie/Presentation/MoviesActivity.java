@@ -5,6 +5,8 @@ import android.os.Bundle;
 import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.view.View;
+import android.widget.EditText;
 import android.widget.Toast;
 
 import androidx.annotation.NonNull;
@@ -28,6 +30,8 @@ public class MoviesActivity extends AppCompatActivity implements MovieListener {
     protected MovieList movieList;
     private RecyclerView recyclerView;
     private MoviesAdapter adapter;
+
+    private String searchKeyword;
 
     public static String clickedMovie = "com.joost.shareameal.extra.CLICKED_MOVIE";
 
@@ -264,4 +268,36 @@ public class MoviesActivity extends AppCompatActivity implements MovieListener {
 
         return super.onOptionsItemSelected(item);
     }
+
+//    public String getSearchKeyword() {
+//        return searchKeyword;
+//    }
+
+    public void searchMovie2(View view) {
+        EditText searchBar = findViewById(R.id.search_input_field2);
+
+        if(!searchBar.getText().toString().equals("")){
+            this.searchKeyword = searchBar.getText().toString();
+            Toast.makeText(this, "Input = " + searchKeyword, Toast.LENGTH_SHORT).show();
+
+            // Zoeken in movielist
+            List<Movie> searchedMovies = new ArrayList<>();
+            searchedMovies.addAll(this.movieList.getMovieList());
+
+            this.movieList.getMovieList().clear();
+
+            for(Movie movie : searchedMovies){
+                if(movie.getTitle().equals(searchKeyword)){
+                    this.movieList.getMovieList().add(movie);
+                }
+            }
+
+            // notify update change
+            adapter.notifyDataSetChanged();
+
+        } else{
+            Toast.makeText(this, "Input needed to search films", Toast.LENGTH_SHORT).show();
+        }
+    }
+
 }
