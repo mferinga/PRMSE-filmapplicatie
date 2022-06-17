@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@drawable/background"
@@ -8,8 +9,8 @@
 
     <ImageView
         android:id="@+id/movie_detail_image"
-        android:layout_width="180dp"
-        android:layout_height="180dp"
+        android:layout_width="140dp"
+        android:layout_height="140dp"
         android:adjustViewBounds="true"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
@@ -51,17 +52,6 @@
         app:layout_constraintBottom_toBottomOf="@+id/movie_detail_image"
         app:layout_constraintEnd_toEndOf="@+id/movie_detail_duration"
         app:layout_constraintStart_toStartOf="@+id/movie_detail_duration"/>
-
-    <androidx.recyclerview.widget.RecyclerView
-        android:id="@+id/movie_detail_activity_actors_recyclerview"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="65dp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/trailer_button">
-
-    </androidx.recyclerview.widget.RecyclerView>
 
     <Button
         android:id="@+id/trailer_button"
@@ -106,17 +96,30 @@
         android:focusable="true"
         android:isIndicator="false"
         android:numStars="10"
-        app:layout_constraintBottom_toTopOf="@+id/movie_detail_activity_actors_recyclerview"
+        android:layout_marginTop="70dp"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/movie_add_to_personal_list_button" />
+        app:layout_constraintTop_toBottomOf="@+id/trailer_button" />
 
     <Button
         android:id="@+id/give_rating_button"
         style="@style/button_style"
+        android:layout_width="150dp"
         android:onClick="giveRating"
         android:text="Give rating"
+        app:layout_constraintBottom_toBottomOf="@+id/ratingBar"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toEndOf="@+id/ratingBar"
         app:layout_constraintTop_toTopOf="@+id/ratingBar" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/movie_detail_activity_actors_recyclerview"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="25dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/give_rating_button">
+
+    </androidx.recyclerview.widget.RecyclerView>
 
 </androidx.constraintlayout.widget.ConstraintLayout>

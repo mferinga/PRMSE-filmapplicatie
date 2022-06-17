@@ -10,14 +10,14 @@
         android:textSize="18dp"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:textColor="@color/design_default_color_on_primary" />
+        android:textColor="@color/textColor" />
 
     <TextView
         android:textSize="18dp"
         android:id="@+id/actor_character"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:textColor="@color/design_default_color_on_primary" />
+        android:textColor="@color/textColor" />
 
     <ImageView
         android:id="@+id/actor_image"

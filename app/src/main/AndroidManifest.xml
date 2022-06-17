@@ -14,7 +14,7 @@
         android:theme="@style/Theme.Filmapplicatie">
 
         <activity
-            android:name=".Presentation.HomescreenActivity"
+            android:name=".Presentation.StartupActivity"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />

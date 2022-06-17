@@ -24,8 +24,7 @@
         android:layout_height="60dp"
         android:backgroundTint="@color/blue1"
         android:onClick="searchMovie"
-        android:src="@drawable/ic_search"
-        app:borderWidth="0dp"
+        android:src="@drawable/icon_search"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
@@ -46,8 +45,7 @@
         android:layout_marginBottom="8dp"
         android:backgroundTint="@color/blue1"
         android:onClick="createNewMovieList"
-        android:src="@drawable/ic_add_button"
-        app:borderWidth="0dp"
+        android:src="@drawable/icon_add"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent" />
 

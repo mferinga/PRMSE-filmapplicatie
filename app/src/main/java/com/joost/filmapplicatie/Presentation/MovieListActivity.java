@@ -33,7 +33,7 @@ import java.util.Collections;
 import java.util.List;
 
 
-public class MovieListActivity extends AppCompatActivity implements MovieListListener, DatasetListener {
+public class  MovieListActivity extends AppCompatActivity implements MovieListListener, DatasetListener {
 
     protected List<MovieList> movieListList = new ArrayList<>();
     protected List<Movie> allMovies = new ArrayList<>();

@@ -1,6 +1,7 @@
 package com.joost.filmapplicatie.Presentation;
 
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.appcompat.app.AppCompatDelegate;
 
 import android.app.UiModeManager;
 import android.content.Context;
@@ -21,16 +22,12 @@ import android.util.DisplayMetrics;
 import com.joost.filmapplicatie.R;
 
 public class SettingsActivity extends AppCompatActivity {
-    private UiModeManager uiModeManager;
-
-
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_settings);
         getSupportActionBar().setTitle("Settings");
-        uiModeManager = (UiModeManager) getSystemService(UI_MODE_SERVICE);
     }
 
     public void saveSettings(View view) {
@@ -41,9 +38,9 @@ public class SettingsActivity extends AppCompatActivity {
         Log.i("SettingsActivity", "Language switch = " + isDarkModeChecked);
 
         if (isDarkModeChecked){
-            uiModeManager.setNightMode(UiModeManager.MODE_NIGHT_YES);
+            AppCompatDelegate.setDefaultNightMode(AppCompatDelegate.MODE_NIGHT_YES);
         } else {
-            uiModeManager.setNightMode(UiModeManager.MODE_NIGHT_NO);
+            AppCompatDelegate.setDefaultNightMode(AppCompatDelegate.MODE_NIGHT_NO);
         }
 
 

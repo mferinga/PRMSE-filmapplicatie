@@ -1,16 +1,15 @@
 <resources xmlns:tools="http://schemas.android.com/tools">
     <!-- Base application theme. -->
-    <style name="Theme.Filmapplicatie" parent="Theme.MaterialComponents.DayNight.DarkActionBar">
+    <style name="Theme.Filmapplicatie" parent="Theme.AppCompat.DayNight.DarkActionBar">
         <!-- Primary brand color. -->
         <item name="colorPrimary">@color/blue1</item>
-        <item name="colorPrimaryVariant">@color/blue3</item>
+        <item name="colorPrimaryVariant">@color/blue2</item>
         <item name="colorOnPrimary">@color/white</item>
         <!-- Secondary brand color. -->
-        <item name="colorSecondary">@color/teal1</item>
-        <item name="colorSecondaryVariant">@color/teal2</item>
+        <item name="colorSecondary">@color/blue1</item>
+        <item name="colorSecondaryVariant">@color/blue1</item>
         <item name="colorOnSecondary">@color/black</item>
         <!-- Status bar color. -->
-        <item name="android:statusBarColor" tools:targetApi="l">?attr/colorPrimaryVariant</item>
-        <!-- Customize your theme here. -->
+        <item name="android:statusBarColor" tools:targetApi="l">@color/blue1</item>
     </style>
 </resources>
