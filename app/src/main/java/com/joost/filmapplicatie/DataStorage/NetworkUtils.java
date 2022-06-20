@@ -21,7 +21,6 @@ public class NetworkUtils {
     private static final String MOVIE_SEARCH_URL_PART2 = "&page=1";
     private static final String MOVIE_DURATION_URL_PART1 = "https://api.themoviedb.org/3/movie/";
     private static final String MOVIE_DURATION_URL_PART2 = "?api_key=12370ac49bb17ff087470862c5fde9ce";
-    private static final String MOVIE_GENRE_URL = "https://api.themoviedb.org/3/movie/popular?api_key=12370ac49bb17ff087470862c5fde9ce&language=en-US&page=1";
 
     static String getMovieList(){
         HttpURLConnection urlConnection = null;
@@ -308,61 +307,61 @@ public class NetworkUtils {
         return durationJSONString;
     }
 
-    static String getGenres(){
-        HttpURLConnection urlConnection = null;
-        BufferedReader reader = null;
-        String genreJSONString = null;
-
-        try{
-
-            Uri builtURI = Uri.parse(MOVIE_GENRE_URL).buildUpon().build();
-            URL requestURL = new URL(builtURI.toString());
-
-            //Getting connection with the API
-            urlConnection = (HttpURLConnection) requestURL.openConnection();
-            urlConnection.setRequestMethod("GET");
-            urlConnection.connect();
-
-            //Creating a reader and a writing for scanning through the API code
-            InputStream inputStream = urlConnection.getInputStream();
-            reader = new BufferedReader(new InputStreamReader(inputStream));
-            StringBuilder builder = new StringBuilder();
-
-            //writing the lines from the API to the StringBuilder
-            String line;
-            while ((line = reader.readLine()) != null){
-                builder.append(line);
-                builder.append("\n");
-            }
-
-            //checks if the builder isn't empty else return null
-            if(builder.length() == 0){
-                return null;
-            }
-
-            //storing the builder.toString() into the mealJSONString attribute
-            genreJSONString = builder.toString();
-
-        } catch (IOException e){
-            e.printStackTrace();
-        } finally {
-            if (urlConnection != null){
-                urlConnection.disconnect();
-            }
-            if (reader != null){
-                try {
-                    reader.close();
-                } catch (IOException e){
-                    e.printStackTrace();
-                }
-            }
-        }
-
-        //returns the mealJSONString attribute which contains all the information from the API
-
-        Log.d("NetworkUtils", "Test 905: Genres requested!");
-        Log.d(LOG_TAG, genreJSONString);
-        return genreJSONString;
-    }
+//    static String getGenres(){
+//        HttpURLConnection urlConnection = null;
+//        BufferedReader reader = null;
+//        String genreJSONString = null;
+//
+//        try{
+//
+//            Uri builtURI = Uri.parse(MOVIE_GENRE_URL).buildUpon().build();
+//            URL requestURL = new URL(builtURI.toString());
+//
+//            //Getting connection with the API
+//            urlConnection = (HttpURLConnection) requestURL.openConnection();
+//            urlConnection.setRequestMethod("GET");
+//            urlConnection.connect();
+//
+//            //Creating a reader and a writing for scanning through the API code
+//            InputStream inputStream = urlConnection.getInputStream();
+//            reader = new BufferedReader(new InputStreamReader(inputStream));
+//            StringBuilder builder = new StringBuilder();
+//
+//            //writing the lines from the API to the StringBuilder
+//            String line;
+//            while ((line = reader.readLine()) != null){
+//                builder.append(line);
+//                builder.append("\n");
+//            }
+//
+//            //checks if the builder isn't empty else return null
+//            if(builder.length() == 0){
+//                return null;
+//            }
+//
+//            //storing the builder.toString() into the mealJSONString attribute
+//            genreJSONString = builder.toString();
+//
+//        } catch (IOException e){
+//            e.printStackTrace();
+//        } finally {
+//            if (urlConnection != null){
+//                urlConnection.disconnect();
+//            }
+//            if (reader != null){
+//                try {
+//                    reader.close();
+//                } catch (IOException e){
+//                    e.printStackTrace();
+//                }
+//            }
+//        }
+//
+//        //returns the mealJSONString attribute which contains all the information from the API
+//
+//        Log.d("NetworkUtils", "Test 905: Genres requested!");
+//        Log.d(LOG_TAG, genreJSONString);
+//        return genreJSONString;
+//    }
 
 }

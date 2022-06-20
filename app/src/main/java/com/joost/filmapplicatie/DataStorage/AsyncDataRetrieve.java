@@ -81,10 +81,10 @@ public class AsyncDataRetrieve extends AsyncTask<Void, Void, String> {
                         genreList.add(genresJSONArray.getInt(j));
                     }
 
-                    int[] movieGenre = new int[genreList.size()];
+                    int[] movieGenres = new int[genreList.size()];
 
                     for (int k = 0; k < genreList.size(); k++) {
-                        movieGenre[k] = genreList.get(k);
+                        movieGenres[k] = genreList.get(k);
                     }
 
 
@@ -96,10 +96,12 @@ public class AsyncDataRetrieve extends AsyncTask<Void, Void, String> {
                     Log.i("AsyncDataRetrieve", "Test 805: movieImageLink = "  + movieImageLink);
                     Log.i("AsyncDataRetrieve", "Test 806: movieRating = "  + movieRating);
                     Log.i("AsyncDataRetrieve", "Test 807: movieDescription = "  + movieDescription);
-                    Log.i("AsyncDataRetrieve", "Test 808: movieDescription = "  + movieGenre[0] + ", " + movieGenre[1] + ", " + movieGenre[2]);
+                    Log.i("AsyncDataRetrieve", "Test 808: movieGenre = "  + movieGenres[0] + ", " + movieGenres[1] + ", " + movieGenres[2]);
                     Log.i("AsyncDataRetrieve", "Test 809: ------------");
 
                     listener.addMovie(new Movie(movieID, movieName, movieReleaseDate, movieImageLink, movieRating, movieDescription));
+
+                    listener.setGenresIDs(movieGenres);
 
                 } catch (Exception e) {
                     e.printStackTrace();

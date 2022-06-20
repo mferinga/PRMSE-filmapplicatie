@@ -20,7 +20,6 @@ import com.joost.filmapplicatie.ApplicationLogic.DatasetListener;
 import com.joost.filmapplicatie.ApplicationLogic.MovieListAdapter;
 import com.joost.filmapplicatie.ApplicationLogic.MovieListListener;
 import com.joost.filmapplicatie.DataStorage.AsyncDataRetrieve;
-import com.joost.filmapplicatie.DataStorage.AsyncDataRetrieveGenres;
 import com.joost.filmapplicatie.DataStorage.AsyncDataRetrieveSearch;
 import com.joost.filmapplicatie.DataStorage.AsyncDataRetrieveTrailer;
 import com.joost.filmapplicatie.Domain.Actor;
@@ -54,8 +53,6 @@ public class  MovieListActivity extends AppCompatActivity implements MovieListLi
         getSupportActionBar().setTitle("Movie lists");
 
         new AsyncDataRetrieve(this).execute();
-
-        new AsyncDataRetrieveGenres(this).execute();
 
         for (MovieList ml : this.movieListList) {
             Log.i("MovieListActivity", "Test 200: " + ml.getTitle());

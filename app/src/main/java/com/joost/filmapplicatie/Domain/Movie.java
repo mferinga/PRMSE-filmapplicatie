@@ -167,4 +167,13 @@ public class Movie implements Serializable {
         return false;
     }
 
+    public boolean checkGenre(int searchedGenreId){
+        for(int genreId : genreIDs){
+            if(genreId == searchedGenreId){
+                return true;
+            }
+        }
+        return false;
+    }
+
 }

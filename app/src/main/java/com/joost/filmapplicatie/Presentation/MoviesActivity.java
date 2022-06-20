@@ -33,6 +33,8 @@ public class MoviesActivity extends AppCompatActivity implements MovieListener {
 
     private String searchKeyword;
 
+    List<Movie>filteredMovies = new ArrayList<>();
+
     public static String clickedMovie = "com.joost.shareameal.extra.CLICKED_MOVIE";
 
     @Override
@@ -129,61 +131,73 @@ public class MoviesActivity extends AppCompatActivity implements MovieListener {
                 break;
 
             case R.id.filter_genre_action:
+                filterMovies(28);
                 Toast.makeText(this, "Filtered data on action", Toast.LENGTH_SHORT).show();
                 adapter.notifyDataSetChanged();
                 break;
 
             case R.id.filter_genre_adventure:
+                filterMovies(12);
                 Toast.makeText(this, "Filtered data on adventure", Toast.LENGTH_SHORT).show();
                 adapter.notifyDataSetChanged();
                 break;
 
             case R.id.filter_genre_animation:
+                filterMovies(16);
                 Toast.makeText(this, "Filtered data on animation", Toast.LENGTH_SHORT).show();
                 adapter.notifyDataSetChanged();
                 break;
 
             case R.id.filter_genre_comedy:
+                filterMovies(35);
                 Toast.makeText(this, "Filtered data on comedy", Toast.LENGTH_SHORT).show();
                 adapter.notifyDataSetChanged();
                 break;
 
             case R.id.filter_genre_crime:
+                filterMovies(80);
                 Toast.makeText(this, "Filtered data on crime", Toast.LENGTH_SHORT).show();
                 adapter.notifyDataSetChanged();
                 break;
 
             case R.id.filter_genre_drama:
+                filterMovies(18);
                 Toast.makeText(this, "Filtered data on drama", Toast.LENGTH_SHORT).show();
                 adapter.notifyDataSetChanged();
                 break;
 
             case R.id.filter_genre_fantasy:
+                filterMovies(14);
                 Toast.makeText(this, "Filtered data on fantasy", Toast.LENGTH_SHORT).show();
                 adapter.notifyDataSetChanged();
                 break;
 
             case R.id.filter_genre_horror:
+                filterMovies(27);
                 Toast.makeText(this, "Filtered data on horror", Toast.LENGTH_SHORT).show();
                 adapter.notifyDataSetChanged();
                 break;
 
             case R.id.filter_genre_mystery:
+                filterMovies(9648);
                 Toast.makeText(this, "Filtered data on mystery", Toast.LENGTH_SHORT).show();
                 adapter.notifyDataSetChanged();
                 break;
 
             case R.id.filter_genre_romance:
+                filterMovies(10749);
                 Toast.makeText(this, "Filtered data on romance", Toast.LENGTH_SHORT).show();
                 adapter.notifyDataSetChanged();
                 break;
 
             case R.id.filter_genre_science_fiction:
+                filterMovies(878);
                 Toast.makeText(this, "Filtered data on science_fiction", Toast.LENGTH_SHORT).show();
                 adapter.notifyDataSetChanged();
                 break;
 
             case R.id.filter_genre_thriller:
+                filterMovies(53);
                 Toast.makeText(this, "Filtered data on thriller", Toast.LENGTH_SHORT).show();
                 adapter.notifyDataSetChanged();
                 break;
@@ -299,6 +313,15 @@ public class MoviesActivity extends AppCompatActivity implements MovieListener {
 
         } else{
             Toast.makeText(this, "Input needed to search films", Toast.LENGTH_SHORT).show();
+        }
+    }
+
+    public void filterMovies(int genreId){
+        filteredMovies.clear();
+        for(Movie movie : movieList.getMovieList()){
+            if(movie.checkGenre(genreId)){
+                filteredMovies.add(movie);
+            }
         }
     }
 
