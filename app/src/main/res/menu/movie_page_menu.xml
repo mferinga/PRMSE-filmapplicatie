@@ -136,6 +136,12 @@
                 <menu>
 
                     <item
+                        android:id="@+id/filter_all_movies"
+                        android:title="All Movies"
+                        android:icon="@drawable/ic_category"
+                        app:showAsAction="never" />
+
+                    <item
                         android:id="@+id/filter_genre_action"
                         android:title="Action"
                         android:icon="@drawable/ic_category"
@@ -143,7 +149,7 @@
 
                     <item
                         android:id="@+id/filter_genre_adventure"
-                        android:title="Action"
+                        android:title="Adverture"
                         android:icon="@drawable/ic_category"
                         app:showAsAction="never"/>
 

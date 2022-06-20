@@ -34,6 +34,7 @@ public class MoviesActivity extends AppCompatActivity implements MovieListener {
     private String searchKeyword;
 
     List<Movie>filteredMovies = new ArrayList<>();
+    List<Movie> recoverMovieList = new ArrayList<>();
 
     public static String clickedMovie = "com.joost.shareameal.extra.CLICKED_MOVIE";
 
@@ -42,7 +43,6 @@ public class MoviesActivity extends AppCompatActivity implements MovieListener {
         super.onCreate(savedInstanceState);
         Log.i("MovieListActivity", "Test 599: MoviesActivity Start");
         setContentView(R.layout.movies_activity_main);
-
 
         Log.i("MovieListActivity", "Test 500: MoviesActivity laden...");
 
@@ -62,6 +62,7 @@ public class MoviesActivity extends AppCompatActivity implements MovieListener {
 
         getSupportActionBar().setTitle(movieList.getTitle());
 
+        recoverMovieList.addAll(movieList.getMovieList());
     }
 
     @Override
@@ -128,6 +129,12 @@ public class MoviesActivity extends AppCompatActivity implements MovieListener {
             case R.id.settings:
                 Intent intent = new Intent(this, SettingsActivity.class);
                 startActivity(intent);
+                break;
+
+            case R.id.filter_all_movies:
+                this.movieList.getMovieList().clear();
+                this.movieList.getMovieList().addAll(recoverMovieList);
+                adapter.notifyDataSetChanged();
                 break;
 
             case R.id.filter_genre_action:
@@ -323,6 +330,17 @@ public class MoviesActivity extends AppCompatActivity implements MovieListener {
                 filteredMovies.add(movie);
             }
         }
+
+        Log.i("MovieListActivity", "Test 530: movies: ");
+
+        this.movieList.getMovieList().clear();
+
+        for(Movie movie : filteredMovies){
+            this.movieList.getMovieList().add(movie);
+            Log.i("MovieListActivity", "Test 530: movies: " + this.movieList.getMovieList().get(0));
+        }
+
+        adapter.notifyDataSetChanged();
     }
 
     public static boolean containsIgnoreCase(String str, String searchStr)     {
