@@ -41,13 +41,9 @@ public class AsyncDataRetrieve extends AsyncTask<Void, Void, String> {
 
             JSONArray itemsArray = jsonObject.getJSONArray("results");
 
-
-
 //            Log.d("AsyncDataRetrieve", "Test 805:" + itemsArray);
 
             Log.d("AsyncDataRetrieve", "Test 806: Data");
-
-
 
             int i = 0;
 
@@ -57,6 +53,9 @@ public class AsyncDataRetrieve extends AsyncTask<Void, Void, String> {
             String movieImageLink = null;
             double movieRating = 0;
             String movieDescription = null;
+            List<Integer> genreList = null;
+
+            JSONArray genresJSONArray = null;
 
 
             while (i < itemsArray.length()) {
@@ -74,6 +73,21 @@ public class AsyncDataRetrieve extends AsyncTask<Void, Void, String> {
                     movieRating = movie.getDouble("vote_average");
                     movieDescription = movie.getString("overview");
 
+                    //get the movie genres
+                    genresJSONArray = movie.getJSONArray("genre_ids");
+
+                    genreList = new ArrayList<>();
+                    for(int j = 0; j < genresJSONArray.length(); j++){
+                        genreList.add(genresJSONArray.getInt(j));
+                    }
+
+                    int[] movieGenre = new int[genreList.size()];
+
+                    for (int k = 0; k < genreList.size(); k++) {
+                        movieGenre[k] = genreList.get(k);
+                    }
+
+
 //                    movieImageLink = "https://hips.hearstapps.com/nl.h-cdn.co/quote/images/quote/nieuws/record!-nog-nooit-zijn-er-zoveel-europese-unicorns-bijgekomen-in-een-half-jaar-216479/4227636-2-dut-NL/Record!-Nog-nooit-zijn-er-zoveel-Europese-Unicorns-bijgekomen-in-een-half-jaar.png";
 
 
@@ -82,7 +96,8 @@ public class AsyncDataRetrieve extends AsyncTask<Void, Void, String> {
                     Log.i("AsyncDataRetrieve", "Test 805: movieImageLink = "  + movieImageLink);
                     Log.i("AsyncDataRetrieve", "Test 806: movieRating = "  + movieRating);
                     Log.i("AsyncDataRetrieve", "Test 807: movieDescription = "  + movieDescription);
-                    Log.i("AsyncDataRetrieve", "Test 808: ------------");
+                    Log.i("AsyncDataRetrieve", "Test 808: movieDescription = "  + movieGenre[0] + ", " + movieGenre[1] + ", " + movieGenre[2]);
+                    Log.i("AsyncDataRetrieve", "Test 809: ------------");
 
                     listener.addMovie(new Movie(movieID, movieName, movieReleaseDate, movieImageLink, movieRating, movieDescription));
 

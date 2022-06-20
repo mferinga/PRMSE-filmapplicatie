@@ -23,8 +23,6 @@ public class NetworkUtils {
     private static final String MOVIE_DURATION_URL_PART2 = "?api_key=12370ac49bb17ff087470862c5fde9ce";
     private static final String MOVIE_GENRE_URL = "https://api.themoviedb.org/3/movie/popular?api_key=12370ac49bb17ff087470862c5fde9ce&language=en-US&page=1";
 
-
-
     static String getMovieList(){
         HttpURLConnection urlConnection = null;
         BufferedReader reader = null;
