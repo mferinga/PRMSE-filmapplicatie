@@ -27,6 +27,7 @@ import com.joost.filmapplicatie.DataStorage.AsyncDataRetrieveDuration;
 import com.joost.filmapplicatie.DataStorage.AsyncDataRetrieveTrailer;
 import com.joost.filmapplicatie.Domain.Actor;
 import com.joost.filmapplicatie.Domain.Movie;
+import com.joost.filmapplicatie.Domain.MovieList;
 import com.joost.filmapplicatie.R;
 import com.squareup.picasso.Picasso;
 
@@ -58,11 +59,6 @@ public class MovieDetailActivity extends AppCompatActivity implements DatasetLis
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.movie_detail_activity_main);
-
-//        for (int i = 0; i < 50; i++) {
-//            this.actors.add(new Actor("Actor nummer " + i));
-//
-//        }
 
         this.clickedMovie = (Movie) getIntent().getSerializableExtra(MoviesActivity.clickedMovie);
         Log.d("MovieDetailActivity", "Test 1200: Check 1");
@@ -215,6 +211,26 @@ public class MovieDetailActivity extends AppCompatActivity implements DatasetLis
             MovieListActivity.personalList.add(this.clickedMovie);
         } else {
             Toast.makeText(this, "This movie is already in your personal list!", Toast.LENGTH_SHORT).show();
+        }
+    }
+
+    public void deleteOutPersonalList(View view){
+        boolean contains = false;
+        int index = 0;
+
+        for (Movie movie : MovieListActivity.personalList){
+            if (movie.getID() == this.clickedMovie.getID()) {
+                contains = true;
+                break;
+            }
+            index++;
+        }
+
+        if (contains){
+            Toast.makeText(this, "Movie has been deleted out of your personal list!",  Toast.LENGTH_SHORT).show();
+            MovieListActivity.personalList.remove(index);
+        } else {
+            Toast.makeText(this, "This movie is not in your personal list!",  Toast.LENGTH_SHORT).show();
         }
     }
 

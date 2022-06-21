@@ -22,4 +22,5 @@
     <string name="save_settings">Save settings</string>
     <!--String for the movies activity-->
     <string name="movies_activity_title">Movies (</string>
+    <string name="delete_out_of_personal_list">Delete out of Personal List</string>
 </resources>

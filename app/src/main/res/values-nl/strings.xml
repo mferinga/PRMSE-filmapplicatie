@@ -23,4 +23,5 @@
     <string name="save_settings">Instellingen opslaan</string>
     <!--String for the movies activity-->
     <string name="movies_activity_title">Films (</string>
+    <string name="delete_out_of_personal_list">Verwijder uit persoonlijke lijst</string>
 </resources>

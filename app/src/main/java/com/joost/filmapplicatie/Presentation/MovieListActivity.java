@@ -76,7 +76,7 @@ public class  MovieListActivity extends AppCompatActivity implements MovieListLi
 
         movieListList.add(new MovieList("allMovies", allMovies));
         movieListList.add(new MovieList("searchedMovies", searchedMovies));
-        movieListList.add(new MovieList("personList", personalList));
+        movieListList.add(new MovieList("personalList", personalList));
 //        recoverMovieListList.addAll(movieListList);
         Log.i("Create Movie info","Test 299: " + movieListList.size());
     }
