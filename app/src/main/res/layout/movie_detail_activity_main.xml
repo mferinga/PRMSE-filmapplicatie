@@ -120,7 +120,7 @@
         style="@style/button_style"
         android:layout_width="150dp"
         android:onClick="giveRating"
-        android:text="Give rating"
+        android:text="@string/give_rating_button_text"
         app:layout_constraintBottom_toBottomOf="@+id/ratingBar"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toEndOf="@+id/ratingBar"

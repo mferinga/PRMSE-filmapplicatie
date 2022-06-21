@@ -20,7 +20,9 @@
     <string name="dutch">Dutch</string>
     <string name="dark_mode_switch_text">Dark mode</string>
     <string name="save_settings">Save settings</string>
-    <!--String for the movies activity-->
+    <!--Strings for the movies activity-->
     <string name="movies_activity_title">Movies (</string>
+    <!--Strings for the detail movie activity-->
     <string name="delete_out_of_personal_list">Delete out of Personal List</string>
+    <string name="give_rating_button_text">Give rating</string>
 </resources>

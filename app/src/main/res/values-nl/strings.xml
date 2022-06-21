@@ -21,7 +21,9 @@
     <string name="dutch">Nederlands</string>
     <string name="dark_mode_switch_text">Donkere modus</string>
     <string name="save_settings">Instellingen opslaan</string>
-    <!--String for the movies activity-->
+    <!--Strings for the movies activity-->
     <string name="movies_activity_title">Films (</string>
+    <!--Strings for the detail movie activity-->
     <string name="delete_out_of_personal_list">Verwijder uit persoonlijke lijst</string>
+    <string name="give_rating_button_text">Geef beoordeling</string>
 </resources>
