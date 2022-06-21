@@ -211,6 +211,7 @@ public class MovieDetailActivity extends AppCompatActivity implements DatasetLis
         }
 
         if (!contains) {
+            Toast.makeText(this, "Movie has been added to your personal list!",  Toast.LENGTH_SHORT).show();
             MovieListActivity.personalList.add(this.clickedMovie);
         } else {
             Toast.makeText(this, "This movie is already in your personal list!", Toast.LENGTH_SHORT).show();
