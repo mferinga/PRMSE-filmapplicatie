@@ -1,19 +1,26 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <string name="app_name">Movies</string>
+    <string name="app_name">Films</string>
     <string name="movie_title">Titel filmlijst</string>
     <string name="homescreen_title_text">Film applicatie</string>
-    <string name="homescreen_button_text">Doorgaan</string>
-    <string name="submit_movie">Lijst maken</string>
     <string name="trailer">Bekijk trailer</string>
     <string name="search_hint">Zoekopdracht</string>
-    <string name="save_settings">Instellingen opslaan</string>
-    <string name="english">Engels</string>
-    <string name="dutch">Nederlands</string>
-    <string name="dark_mode_switch_text">Donkere modus</string>
     <string name="add_to_personal_list">Toevoegen aan persoonlijke lijst</string>
     <string name="icon_of_application">Icoon van toepassing</string>
     <string name="searched_movies_list_name">Gezochte films</string>
     <string name="personal_list_list_name">Persoonlijke lijst</string>
     <string name="all_movies_list_name">Alle films</string>
+    <!--Strings for the movie list activity-->
+    <string name="movie_list_activity_title">Film lijsten</string>
+    <!--Strings for the create movie activity-->
+    <string name="create_list_activity_title">Maak nieuwe lijst</string>
+    <string name="submit_movie">Lijst maken</string>
+    <!--Strings for the settings activity-->
+    <string name="settings_activity_title">Instellingen</string>
+    <string name="english">Engels</string>
+    <string name="dutch">Nederlands</string>
+    <string name="dark_mode_switch_text">Donkere modus</string>
+    <string name="save_settings">Instellingen opslaan</string>
+    <!--String for the movies activity-->
+    <string name="movies_activity_title">Films (</string>
 </resources>

@@ -17,7 +17,9 @@ public class CreateMovieList extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.create_movie_list);
-        getSupportActionBar().setTitle("Create new list");
+
+        String actionBarTitle = getResources().getString(R.string.create_list_activity_title);
+        getSupportActionBar().setTitle(actionBarTitle);
     }
 
     public void getData(){

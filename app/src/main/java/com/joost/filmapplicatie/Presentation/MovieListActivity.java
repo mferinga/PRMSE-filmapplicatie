@@ -47,7 +47,9 @@ public class  MovieListActivity extends AppCompatActivity implements MovieListLi
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.movie_list_activity_main);
-        getSupportActionBar().setTitle("Movie lists");
+
+        String actionBarTitle = getResources().getString(R.string.movie_list_activity_title);
+        getSupportActionBar().setTitle(actionBarTitle);
 
         new AsyncDataRetrieve(this).execute();
 

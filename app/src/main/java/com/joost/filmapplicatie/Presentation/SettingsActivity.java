@@ -12,7 +12,6 @@ import android.widget.Switch;
 import java.util.Locale;
 import android.content.res.Configuration;
 import android.content.res.Resources;
-import android.util.DisplayMetrics;
 
 import com.joost.filmapplicatie.R;
 
@@ -22,7 +21,9 @@ public class SettingsActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_settings);
-        getSupportActionBar().setTitle("Settings");
+
+        String actionBarTitle = getResources().getString(R.string.settings_activity_title);
+        getSupportActionBar().setTitle(actionBarTitle);
     }
 
     public void saveSettings(View view) {
@@ -41,8 +42,6 @@ public class SettingsActivity extends AppCompatActivity {
 
         Switch languageSwitch = findViewById(R.id.languageSwitch);
 
-        languageSwitch.isChecked();
-
         boolean isLanguageChecked = languageSwitch.isChecked();
         Log.i("SettingsActivity", "Language switch = " + isLanguageChecked);
 
@@ -52,20 +51,16 @@ public class SettingsActivity extends AppCompatActivity {
             setLocale("en");
         }
 
-
-        Intent intent = new Intent(this, MovieListActivity.class);
+        Intent intent = new Intent(this, StartupActivity.class);
         startActivity(intent);
     }
 
-    public void setLocale(String lang) {
-        Locale myLocale = new Locale(lang);
-        Resources res = getResources();
-        DisplayMetrics dm = res.getDisplayMetrics();
-        Configuration conf = res.getConfiguration();
-        conf.locale = myLocale;
-        res.updateConfiguration(conf, dm);
-        Intent refresh = new Intent(this, MovieListActivity.class);
-        finish();
-        startActivity(refresh);
+    public void setLocale(String language) {
+        Locale locale = new Locale(language);
+        locale.setDefault(locale);
+        Resources resources = getResources();
+        Configuration configuration = resources.getConfiguration();
+        configuration.locale = locale;
+        resources.updateConfiguration(configuration, resources.getDisplayMetrics());
     }
 }

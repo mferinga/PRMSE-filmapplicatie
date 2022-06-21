@@ -59,7 +59,8 @@ public class MoviesActivity extends AppCompatActivity implements MovieListener {
         recyclerView.setLayoutManager(new GridLayoutManager(this, 2));
         Log.i("MovieListActivity", "Test 504: recyclerview layout gezet");
 
-        getSupportActionBar().setTitle(movieList.getTitle());
+        String actionBarTitle = getResources().getString(R.string.movies_activity_title);
+        getSupportActionBar().setTitle(actionBarTitle + movieList.getTitle() + ")");
 
         recoverMovieList.addAll(movieList.getMovieList());
     }
