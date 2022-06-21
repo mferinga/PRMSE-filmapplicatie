@@ -15,4 +15,5 @@
     <string name="searched_movies_list_name">Searched movies</string>
     <string name="personal_list_list_name">Personal list</string>
     <string name="all_movies_list_name">All movies</string>
+    <string name="delete_out_of_personal_list">Delete out of Personal List</string>
 </resources>
