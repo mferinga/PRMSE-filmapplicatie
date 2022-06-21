@@ -5,7 +5,6 @@ import android.util.Log;
 
 import com.joost.filmapplicatie.ApplicationLogic.DatasetListener;
 import com.joost.filmapplicatie.Domain.Actor;
-import com.joost.filmapplicatie.Domain.Movie;
 
 import org.json.JSONArray;
 import org.json.JSONException;

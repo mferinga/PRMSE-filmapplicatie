@@ -1,8 +1,6 @@
 package com.joost.filmapplicatie.ApplicationLogic;
 
 import android.content.Context;
-import android.media.Image;
-import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -13,7 +11,6 @@ import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.joost.filmapplicatie.Domain.Actor;
-import com.joost.filmapplicatie.Domain.MovieList;
 import com.joost.filmapplicatie.R;
 import com.squareup.picasso.Picasso;
 

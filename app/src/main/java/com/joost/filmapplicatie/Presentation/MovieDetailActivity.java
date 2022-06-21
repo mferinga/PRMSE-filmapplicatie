@@ -16,22 +16,17 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 import androidx.appcompat.app.AppCompatActivity;
-import androidx.recyclerview.widget.GridLayoutManager;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
-import com.google.android.material.badge.BadgeUtils;
 import com.joost.filmapplicatie.ApplicationLogic.ActorsAdapter;
 import com.joost.filmapplicatie.ApplicationLogic.DatasetListener;
 import com.joost.filmapplicatie.ApplicationLogic.DatasetListenerTrailer;
-import com.joost.filmapplicatie.ApplicationLogic.MovieListAdapter;
-import com.joost.filmapplicatie.DataStorage.AsyncDataRetrieve;
 import com.joost.filmapplicatie.DataStorage.AsyncDataRetrieveActors;
 import com.joost.filmapplicatie.DataStorage.AsyncDataRetrieveDuration;
 import com.joost.filmapplicatie.DataStorage.AsyncDataRetrieveTrailer;
 import com.joost.filmapplicatie.Domain.Actor;
 import com.joost.filmapplicatie.Domain.Movie;
-import com.joost.filmapplicatie.Domain.MovieList;
 import com.joost.filmapplicatie.R;
 import com.squareup.picasso.Picasso;
 

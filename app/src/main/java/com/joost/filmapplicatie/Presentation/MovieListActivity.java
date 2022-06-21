@@ -1,7 +1,5 @@
 package com.joost.filmapplicatie.Presentation;
 
-import static java.sql.Types.NULL;
-
 import android.content.Intent;
 import android.os.Bundle;
 import android.util.Log;
@@ -21,14 +19,12 @@ import com.joost.filmapplicatie.ApplicationLogic.MovieListAdapter;
 import com.joost.filmapplicatie.ApplicationLogic.MovieListListener;
 import com.joost.filmapplicatie.DataStorage.AsyncDataRetrieve;
 import com.joost.filmapplicatie.DataStorage.AsyncDataRetrieveSearch;
-import com.joost.filmapplicatie.DataStorage.AsyncDataRetrieveTrailer;
 import com.joost.filmapplicatie.Domain.Actor;
 import com.joost.filmapplicatie.Domain.Movie;
 import com.joost.filmapplicatie.Domain.MovieList;
 import com.joost.filmapplicatie.R;
 
 import java.util.ArrayList;
-import java.util.Collections;
 import java.util.List;
 
 

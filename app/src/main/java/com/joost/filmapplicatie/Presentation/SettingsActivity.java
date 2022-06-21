@@ -3,8 +3,6 @@ package com.joost.filmapplicatie.Presentation;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.app.AppCompatDelegate;
 
-import android.app.UiModeManager;
-import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
 import android.util.Log;
@@ -12,9 +10,6 @@ import android.view.View;
 import android.widget.Switch;
 
 import java.util.Locale;
-import android.os.Bundle;
-import android.app.Activity;
-import android.content.Intent;
 import android.content.res.Configuration;
 import android.content.res.Resources;
 import android.util.DisplayMetrics;

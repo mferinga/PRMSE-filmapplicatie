@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-
     <string name="app_name">Movies</string>
     <string name="movie_title">Titel filmlijst</string>
     <string name="homescreen_title_text">Film applicatie</string>
@@ -17,5 +16,4 @@
     <string name="searched_movies_list_name">Gezochte films</string>
     <string name="personal_list_list_name">Persoonlijke lijst</string>
     <string name="all_movies_list_name">Alle films</string>
-
 </resources>

@@ -3,12 +3,8 @@ package com.joost.filmapplicatie.DataStorage;
 import android.os.AsyncTask;
 import android.util.Log;
 
-import com.joost.filmapplicatie.ApplicationLogic.DatasetListener;
 import com.joost.filmapplicatie.ApplicationLogic.DatasetListenerTrailer;
-import com.joost.filmapplicatie.Domain.Actor;
-import com.joost.filmapplicatie.Domain.Movie;
 
-import org.json.JSONArray;
 import org.json.JSONException;
 import org.json.JSONObject;
 

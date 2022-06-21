@@ -10,9 +10,7 @@ import android.widget.TextView;
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
-import com.joost.filmapplicatie.Domain.Movie;
 import com.joost.filmapplicatie.Domain.MovieList;
-import com.joost.filmapplicatie.Presentation.MovieListActivity;
 import com.joost.filmapplicatie.R;
 
 import java.util.List;

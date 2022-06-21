@@ -1,5 +1,4 @@
 <resources>
-
     <string name="app_name">Movies</string>
     <string name="movie_title">Movie List Title</string>
     <string name="homescreen_title_text">Movie application</string>
@@ -16,5 +15,4 @@
     <string name="searched_movies_list_name">Searched movies</string>
     <string name="personal_list_list_name">Personal list</string>
     <string name="all_movies_list_name">All movies</string>
-
 </resources>
