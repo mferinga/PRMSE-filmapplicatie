@@ -31,6 +31,7 @@ import java.util.List;
 public class  MovieListActivity extends AppCompatActivity implements MovieListListener, DatasetListener {
 
     protected List<MovieList> movieListList = new ArrayList<>();
+
     protected List<Movie> allMovies = new ArrayList<>();
     protected List<Movie> searchedMovies = new ArrayList<>();
     protected List<int[]> genreMoviesIDs = new ArrayList<>();
@@ -70,16 +71,25 @@ public class  MovieListActivity extends AppCompatActivity implements MovieListLi
         Bundle extras = getIntent().getExtras();
         Log.i("Create Movie info","Test 250: " + extras);
         checkNewListCreated(extras);
+
+        movieListList.add(new MovieList("allMovies", allMovies));
+        movieListList.add(new MovieList("searchedMovies", searchedMovies));
+        movieListList.add(new MovieList("personList", personalList));
+//        recoverMovieListList.addAll(movieListList);
+        Log.i("Create Movie info","Test 299: " + movieListList.size());
     }
 
     public void checkNewListCreated(Bundle extras){
         if(extras != null){
             String movieListTitle = extras.getString("movieListTitle");
 
+//            Log.i("CreateNewMovieList", "Test 299: " + "size is " + movieListList.size());
             MovieList movieList = new MovieList(movieListTitle);
 
             movieListList.add(movieList);
-            adapter.notifyItemInserted(movieListList.size() - 1);
+            Log.i("CreateNewMovieList", "Test 299: " + "size is " + movieListList.size());
+            adapter.notifyItemInserted(movieListList.size());
+
         }
     }
 
